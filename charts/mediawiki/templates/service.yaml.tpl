@@ -8,7 +8,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ template "base.name.release" . }}
-  labels:
   {{- include "mw.helpers.labels" . | indent 2 }}
 spec:
   type: NodePort
